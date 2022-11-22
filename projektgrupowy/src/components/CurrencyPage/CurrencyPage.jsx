@@ -24,9 +24,8 @@ const CurrencyConverter = () => {
     }
   }, [rates]);
 
-  function format(number: any) {
-    return number.toFixed(4);
-  }
+function format(number: number, InterfaceDoWaluty[])
+
 
   function handleAmount1Change(amount1) {
     setAmount2(format((amount1 * rates[currency2]) / rates[currency1]));
