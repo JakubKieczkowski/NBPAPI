@@ -1,3 +1,10 @@
+interface ExchangeInput {
+  amount1: number;
+  amount2: number;
+  currency1: string;
+  currency2: string;
+}
+
 const ExchangeInput = (props) => {
   return (
     <div className="group">
@@ -10,7 +17,7 @@ const ExchangeInput = (props) => {
         value={props.currency}
         onChange={(event) => props.onCurrencyChange(event.target.value)}
       >
-        {props.currencies.map((currency) => (
+        {props.currencies.map((currency: string[]) => (
           <option value={currency}>{currency}</option>
         ))}
       </select>
