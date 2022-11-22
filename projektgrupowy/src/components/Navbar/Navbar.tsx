@@ -27,7 +27,7 @@ return(
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Grupa 3
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
