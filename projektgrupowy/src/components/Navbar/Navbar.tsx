@@ -41,26 +41,37 @@ const Navbar = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
             onClick={handleOpenNavMenu}
+   {/* const pages = ["Home", "Search"]; */}
+           
+   {pages.map((page) => (
+              <Link
+                    key={page}
+                    to={page === "Home" ? "/" : page.toLowerCase()}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <MenuItem onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">{page}</Typography>
+                    </MenuItem>
+                  </Link>
+  
+            ))}
           >
             <MenuIcon />
           </IconButton>
-          {/* const pages = ["Home", "Search"]; */}
-          {pages.map((page) => (
-            <Link
-                  key={page}
-                  to={page === "Home" ? "/" : page.toLowerCase()}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                </Link>
-
-          ))}
+       //
+        
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Grupa 3
           </Typography>
+          <Box sx={{ flexGrow: 0 }}>
+            <Link
+              to={loggedIn ? "/user" : "/login"}
+              style={{ textDecoration: "none" }}
+            >
+
+            </Link>
+            </Box>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
