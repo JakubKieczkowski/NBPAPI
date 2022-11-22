@@ -41,7 +41,11 @@ const Navbar = () => {
             aria-label="menu"
             sx={{ mr: 2 }}
             onClick={handleOpenNavMenu}
-   {/* const pages = ["Home", "Search"]; */}
+   
+          >
+            <MenuIcon />
+          </IconButton>
+       {/* const pages = ["Home", "Search"]; */}
            
    {pages.map((page) => (
               <Link
@@ -55,10 +59,6 @@ const Navbar = () => {
                   </Link>
   
             ))}
-          >
-            <MenuIcon />
-          </IconButton>
-       //
         
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
